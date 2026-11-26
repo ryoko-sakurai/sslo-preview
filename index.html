@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>創・佐藤法律事務所｜仮トップページ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css?v=20261125">
+<style>
+/* ===== First View（白基調・Corporate寄りの画像へ：No.11 / No.12） ===== */
+.fv {
+  position: relative; overflow: hidden;
+  aspect-ratio: 1672 / 941;
+  background: #eef2f7 url(assets/bg-fv.jpg) center / cover no-repeat;
+}
+.fv-copy { position: absolute; z-index: 3; left: 3.9%; top: 25.5%; width: 37%; }
+.fv-title { font-size: 2.95vw; }
+.fv-rule { width: 3.3vw; height: 2px; background: var(--navy); margin: 3.2vw 0 2.6vw; }
+.fv-lead { font-size: max(13px, 1.02vw); color: var(--ink); line-height: 2.05; max-width: 29vw; }
+.fv-cta { display: inline-flex; align-items: center; gap: 12px; margin-top: 2.4vw; font-family: var(--en); font-size: max(12px, .85vw); letter-spacing: .12em; color: var(--navy); border-bottom: 1px solid var(--navy); padding-bottom: 6px; }
+.panels { position: absolute; z-index: 2; left: 35.586%; top: 19.129%; width: 65.97%; height: 65.568%; }
+.panel {
+  position: absolute; top: 0; height: 100%; width: 31.097%;
+  clip-path: polygon(46.647% 0, 100% 0, 53.353% 100%, 0 100%);
+  background: var(--navy-deep) center / cover no-repeat;
+  color: #fff; overflow: hidden; transition: filter .4s;
+}
+.panel:nth-child(1) { left: 0; }
+.panel:nth-child(2) { left: 17.226%; }
+.panel:nth-child(3) { left: 34.452%; }
+.panel:nth-child(4) { left: 51.677%; }
+.panel:nth-child(5) { left: 68.903%; clip-path: polygon(46.647% 0, 100% 0, 100% 100%, 0 100%); }
+.panel::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,26,54,.7) 0%, rgba(12,26,54,.2) 30%, rgba(12,26,54,0) 50%); }
+.panel:hover { filter: brightness(1.1); }
+.panel-label { position: absolute; top: 8.6%; left: 49%; right: 2%; font-family: var(--en); font-size: 1.22vw; line-height: 1.5; letter-spacing: .01em; }
+.panel-label::after { content: ""; display: block; width: 1.9vw; height: 1.5px; background: #fff; margin-top: 1.4vw; opacity: .9; }
+.p-fintech  { background-image: url(assets/p-cap.jpg); }
+.p-ma       { background-image: url(assets/p-ma.jpg); }
+.p-funds    { background-image: url(assets/p-funds.jpg); }
+.p-tech     { background-image: url(assets/p-tech.jpg); }
+.p-startups { background-image: url(assets/fv-startups.jpg); }
+.fv-scroll { position: absolute; z-index: 2; left: 3.9%; bottom: 3%; font-family: var(--en); font-size: 11px; letter-spacing: .2em; color: var(--ink-sub); display: flex; align-items: center; gap: 12px; }
+.fv-scroll::after { content: ""; width: 64px; height: 1px; background: var(--ink-sub); }
+.fv .rq { position: absolute; z-index: 4; right: 3vw; bottom: 3%; }
+
+/* About（理念） */
+.about-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(40px, 6vw, 96px); }
+.about-body p + p { margin-top: 1.4em; }
+.approach { margin-top: clamp(56px, 7vw, 96px); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.approach li { padding: 32px 28px 8px 0; }
+.approach li + li { padding-left: 28px; border-left: 1px solid var(--line); }
+.approach-no { font-family: var(--en); font-size: var(--fs-sub); color: var(--accent); letter-spacing: .14em; }
+.approach-en { margin-top: 8px; }
+.approach-ja { font-family: var(--serif); font-size: 16px; margin-top: 6px; color: var(--ink-sub); }
+
+/* News / Events（No.13：理念の直下へ移動） */
+.ne-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(40px, 6vw, 80px); }
+.ne-col h3 { display: flex; justify-content: space-between; align-items: end; padding-bottom: 16px; border-bottom: 1px solid var(--navy); }
+.ne-col h3 .more { font-size: 13px; }
+.ne-item { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.ne-date { font-family: var(--en); font-size: 14px; color: var(--ink-sub); }
+.ne-tag { display: inline-block; font-size: 11px; color: var(--navy); background: var(--tint); padding: 1px 8px; margin-bottom: 6px; }
+.ne-text { font-size: 14.5px; line-height: 1.8; }
+
+/* Offices（No.2：赤坂・丸の内を同じ比重で） */
+.of-intro { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 3vw, 48px); }
+.of-box { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 28px; padding: 32px; border: 0; background: #fff; }
+.of-box-photo { aspect-ratio: 4 / 5; background: linear-gradient(160deg, #eef1f6, #d7dee8); display: grid; place-items: center; font-family: var(--en); font-size: 12px; letter-spacing: .14em; color: #8b98ad; }
+.of-box-en { font-family: var(--en); font-size: var(--fs-sub); letter-spacing: .2em; color: var(--accent); }
+.of-box h3 { font-family: var(--serif); font-size: 22px; color: var(--navy); margin-top: 6px; line-height: 1.5; }
+.of-box-rep { font-size: var(--fs-small); color: var(--ink-sub); margin-top: 4px; }
+.of-box-body { font-size: 14px; margin-top: 16px; }
+.of-box-fields { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 6px 14px; }
+.of-box-fields li { font-family: var(--en); font-size: 13px; color: var(--navy); }
+.of-box-fields li::before { content: "— "; color: var(--accent); }
+.of-box .more { margin-top: 20px; font-size: 13px; }
+
+/* Practices（No.3 タグ／No.4 カルーセル） */
+.pr-card { display: flex; flex-direction: column; border: 0; color: var(--ink); background: #fff; transition: border-color .3s, box-shadow .3s; }
+.pr-card:hover { box-shadow: 0 14px 36px rgba(0,0,0,.25); }
+.pr-thumb { aspect-ratio: 16 / 10; background: center / cover no-repeat; }
+.pr-body { padding: 24px 24px 28px; display: flex; flex-direction: column; flex: 1; }
+.pr-no { font-family: var(--en); font-size: 12px; letter-spacing: .14em; color: var(--accent); }
+.pr-name { margin: 6px 0 18px; }
+.pr-tags { margin-top: auto; display: flex; flex-wrap: wrap; }
+/* 案A：テキストのみ（区切り線） */
+[data-variant="a"] .pr-tags { gap: 4px 0; }
+[data-variant="a"] .pr-tags li { font-size: 13px; color: var(--ink-sub); }
+[data-variant="a"] .pr-tags li:not(:last-child)::after { content: "／"; margin: 0 .35em; color: var(--line-strong); }
+/* 案B：薄い背景色のタグ */
+[data-variant="b"] .pr-tags { gap: 6px; }
+[data-variant="b"] .pr-tags li { font-size: 12px; line-height: 1.5; padding: 4px 10px; background: var(--tint); color: var(--ink); }
+/* 案C：ハッシュ付きテキスト */
+[data-variant="c"] .pr-tags { gap: 4px 14px; }
+[data-variant="c"] .pr-tags li { font-size: 13px; color: var(--navy); }
+[data-variant="c"] .pr-tags li::before { content: "#"; color: var(--accent); margin-right: 2px; }
+.variant-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 24px; font-size: 12px; color: #f1c7bb; }
+.variant-bar .chips button { font-size: 12px; padding: 4px 12px; }
+.hide-rq .variant-bar > span { display: none; }
+
+/* Professionals（No.1：カテゴリー一覧＋名前にカーソルで写真） */
+.pf { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.4fr); gap: clamp(32px, 5vw, 72px); align-items: start; }
+.pf-preview { position: sticky; top: 100px; }
+.pf-preview-photo { aspect-ratio: 4 / 5; background: linear-gradient(160deg, #eef1f6, #d2dae6); display: grid; place-items: center; font-family: var(--serif); font-size: 40px; color: #9aa6b9; transition: opacity .3s; }
+.pf-preview-role { font-size: var(--fs-small); color: var(--ink-sub); margin-top: 16px; }
+.pf-preview-name { font-family: var(--serif); font-size: 21px; color: var(--navy); }
+.pf-names { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.pf-names li { border-bottom: 1px solid var(--line); }
+.pf-names a { display: flex; flex-direction: column; padding: 16px 12px 16px 0; transition: color .2s, padding .3s; }
+.pf-names a .n { font-family: var(--serif); font-size: 17px; color: var(--navy); }
+.pf-names a .e { font-family: var(--en); font-size: 12px; color: var(--ink-sub); letter-spacing: .06em; }
+.pf-names a.is-on, .pf-names a:hover { padding-left: 10px; }
+.pf-names a.is-on .n { color: var(--accent); }
+.pf-cat-foot { margin-top: 24px; display: flex; justify-content: flex-end; }
+
+/* Insights（No.5 最新記事／No.7 記事とFAQを分ける） */
+.in-card { display: block; border: 0; background: #fff; transition: box-shadow .3s, transform .3s; }
+.in-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(20,37,74,.08); }
+.in-img { aspect-ratio: 16 / 9; background: center / cover no-repeat; }
+.in-body { padding: 20px 22px 24px; }
+.in-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; font-size: 12px; color: var(--ink-sub); }
+.in-cat { font-family: var(--en); color: var(--accent); letter-spacing: .04em; }
+.in-office { font-size: 11px; padding: 0 6px; border: 1px solid var(--line-strong); }
+.in-title { font-size: 15px; font-weight: 500; color: var(--navy); margin-top: 10px; line-height: 1.75; }
+.in-filter { margin-bottom: 24px; }
+.faq-list { border-top: 1px solid var(--line); }
+.faq-list details { border-bottom: 1px solid var(--line); }
+.faq-list summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 32px minmax(0, 1fr) 24px; gap: 12px; padding: 22px 0; align-items: start; }
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-q { font-family: var(--en); font-size: 18px; color: var(--accent); line-height: 1.5; }
+.faq-t { font-weight: 500; color: var(--navy); }
+.faq-i { font-size: 20px; line-height: 1.3; color: var(--ink-sub); transition: transform .3s; text-align: center; }
+details[open] .faq-i { transform: rotate(45deg); }
+.faq-a { padding: 0 36px 24px 44px; color: var(--ink-sub); font-size: 14px; }
+.faq-foot { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; }
+
+/* Awards（No.6） */
+.aw-card { padding: 32px 28px; border: 1px solid var(--line); border-top: 2px solid var(--gold); background: #fff; }
+.aw-year { font-family: var(--en); font-size: 13px; color: var(--gold); letter-spacing: .14em; }
+.aw-org { margin-top: 6px; }
+.aw-desc { font-size: 14px; color: var(--ink-sub); margin-top: 10px; line-height: 1.85; }
+
+/* Careers */
+.careers { position: relative; color: #fff; background: var(--navy-deep); overflow: hidden; }
+.careers::before { content: ""; position: absolute; inset: 0; background: url(assets/img-office.jpg) center 55% / cover no-repeat; opacity: .28; }
+.careers .wrap { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 40px; }
+.careers .eyebrow { color: #a9cde0; }
+.careers .sec-title { color: #fff; }
+.careers p.lead { margin-top: 20px; max-width: 36em; color: rgba(255,255,255,.88); }
+
+/* Access / Contact */
+.of-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)) minmax(0, 1.1fr); gap: 24px; }
+.of-card { border: 1px solid var(--line); padding: 32px; }
+.of-name { font-family: var(--serif); font-size: 20px; color: var(--navy); }
+.of-en { font-family: var(--en); font-size: 13px; color: var(--ink-sub); letter-spacing: .1em; }
+.of-addr { font-size: 14px; margin-top: 16px; color: var(--ink-sub); }
+.of-map { aspect-ratio: 16 / 9; margin-top: 20px; background: var(--tint); display: grid; place-items: center; font-size: 12px; color: #8b98ad; }
+.contact-card { background: var(--navy); color: #fff; padding: 40px 32px; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; }
+.contact-card .eyebrow { color: #a9cde0; }
+.contact-card .sec-title { color: #fff; font-size: 26px; }
+.contact-card p { font-size: 14px; color: rgba(255,255,255,.85); margin-top: 16px; }
+
+@media (max-width: 1180px) {
+  .of-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .contact-card { grid-column: 1 / -1; }
+  .of-intro { grid-template-columns: minmax(0, 1fr); }
+  .pf-names { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 1080px) {
+  .fv { aspect-ratio: auto; background-position: 20% 100%; padding: 130px var(--gutter) 64px; display: grid; gap: 48px; }
+  .fv-copy { position: relative; left: auto; top: auto; width: auto; }
+  .fv-title { font-size: clamp(26px, 4.4vw, 40px); line-height: 1.6; }
+  .fv-rule { width: 52px; margin: 32px 0 24px; }
+  .fv-lead { font-size: 15px; max-width: 34em; }
+  .fv-cta { font-size: 13px; margin-top: 32px; }
+  .panels { position: relative; left: auto; top: auto; height: auto; width: 100%; aspect-ratio: 1103 / 617; }
+  .panel-label { font-size: clamp(11px, 1.9vw, 18px); }
+  .panel-label::after { width: 24px; margin-top: 12px; }
+  .fv-scroll { display: none; }
+  .fv .rq { position: static; justify-self: start; }
+  .about-grid { grid-template-columns: minmax(0, 1fr); }
+  .ne-grid { grid-template-columns: minmax(0, 1fr); }
+  .careers .wrap { grid-template-columns: minmax(0, 1fr); }
+  .carousel { --per: 2 !important; }
+  .pf { grid-template-columns: minmax(0, 1fr); }
+  .pf-preview { display: none; }
+}
+@media (max-width: 640px) {
+  .fv { padding-top: 110px; }
+  .panels { width: auto; margin: 0 calc(var(--gutter) * -1); aspect-ratio: auto; display: grid; gap: 4px; }
+  .panel { position: relative; left: auto !important; width: auto; height: 92px; clip-path: none !important; background-size: cover; background-position: 50% 50%; }
+  .panel::before { background: linear-gradient(90deg, rgba(12,26,54,.85) 0%, rgba(12,26,54,.25) 75%); }
+  .panel-label { top: 50%; left: var(--gutter); right: auto; transform: translateY(-50%); font-size: 16px; }
+  .panel-label::after { display: none; }
+  .approach { grid-template-columns: minmax(0, 1fr); }
+  .approach li, .approach li + li { padding: 24px 0; border-left: 0; border-bottom: 1px solid var(--line); }
+  .ne-item { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .of-box { grid-template-columns: minmax(0, 1fr); padding: 24px; }
+  .of-box-photo { aspect-ratio: 16 / 10; }
+  .pf-names { grid-template-columns: minmax(0, 1fr); }
+  .of-grid { grid-template-columns: minmax(0, 1fr); }
+  .faq-a { padding: 0 0 24px 44px; }
+}
+</style>
+</head>
+<body>
+
+<div class="draft"><button type="button" data-rq-toggle>修<span class="nw">正N</span>o<span class="nw">.を</span><wbr>隠す</button><span>仮デザイン・ダミー素材を<wbr>含みます</span></div>
+
+<!-- ============ Header ============ -->
+<header class="header">
+  <a href="index.html" class="logo" aria-label="創・佐藤法律事務所">
+    <span class="logo-main">SO<small>&amp;</small>SATO</span>
+    <span class="logo-sub">INNOVATIVE LAWOFFICES</span>
+  </a>
+  <nav class="gnav" aria-label="グローバルナビゲーション">
+    <div class="gnav gnav-links">
+      <a href="#about">About</a>
+      <a href="#professionals">Professionals</a>
+      <a href="#practices">Practices</a>
+      <a href="insights.html">Insights</a>
+      <a href="#news">News &amp; Events</a>
+      <a href="#careers">Careers</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="gnav-tools">
+      <a href="#" class="icon-btn" aria-label="サイト内検索">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
+      </a>
+      <a href="#" class="lang">JP / EN</a>
+      <button class="menu-btn" aria-label="メニュー"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ First View ============ -->
+<section class="fv" aria-label="ファーストビュー">
+  <div class="fv-copy">
+    <h1 class="fv-title t-h1"><span class="ib">法律と<wbr>ビジネスの<wbr>間に、</span><span class="ib">実行可能な<wbr>道筋を</span><span class="ib">つくる。</span></h1>
+    <div class="fv-rule"></div>
+    <p class="fv-lead">創・佐藤法律事務所は、<wbr>企業法務、<wbr>金融、<wbr>テクノロジーが<wbr>交差する<wbr>領域で、<wbr>企業の<wbr>成長と<wbr>重要な意思決定を<wbr>支える<wbr>法律事務所です。</p>
+    <a href="#about" class="fv-cta">ABOUT US
+      <svg width="20" height="10" viewBox="0 0 20 10" fill="none" stroke="currentColor"><path d="M0 5h18M14 1l4 4-4 4"/></svg>
+    </a>
+  </div>
+
+  <div class="panels" role="list" aria-label="業務分野">
+    <a href="#practices" class="panel p-fintech" role="listitem"><span class="panel-label">FinTech /<br>Digital Assets</span></a>
+    <a href="#practices" class="panel p-ma" role="listitem"><span class="panel-label">M&amp;A /<br>Corporate</span></a>
+    <a href="#practices" class="panel p-funds" role="listitem"><span class="panel-label">Funds /<br>Finance</span></a>
+    <a href="#practices" class="panel p-tech" role="listitem"><span class="panel-label">Technology /<br>AI / Innovation</span></a>
+    <a href="#practices" class="panel p-startups" role="listitem"><span class="panel-label">Startups /<br>Emerging Companies</span></a>
+  </div>
+
+  <div class="fv-scroll">SCROLL</div>
+  <span class="rq">No.11 画像見直し／No.12 白基調</span>
+</section>
+
+<!-- ============ About（理念） ============ -->
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <p class="eyebrow">About Us</p>
+        <h2 class="sec-title"><span class="ib">既存の<wbr>法分野の</span><span class="ib">境界を<wbr>越えて。</span></h2>
+      </div>
+      <div class="about-body">
+        <p>M&amp;A、<wbr>ファイナンス、<wbr>スタートアップから、<wbr>FinTech、<wbr>デジタルアセット、<wbr>AI<wbr>その<wbr>他の<wbr>先端テクノロジーまで、<wbr>既存の<wbr>法分野の<wbr>境界を<wbr>越えて<wbr>生じる<wbr>課題に<wbr>取り<wbr>組んでいます。</p>
+        <p>私たちは、<wbr>法律上の<wbr>問題点を<wbr>指摘する<wbr>ところで<wbr>仕事を<wbr>終えません。<br />クライアントが<wbr>何を<wbr>実現したいのかを<wbr>理解し、<wbr>その<wbr>ために<wbr>どのような<wbr>選択肢が<wbr>あり、<wbr>どこまで<wbr>進むことができるのかを<wbr>考える。<br />法律と<wbr>ビジネスの<wbr>間に、<wbr>実行可能な<wbr>道筋を<wbr>つくる<wbr>ことが<wbr>私たちの<wbr>役割です。</p>
+        <p style="margin-top:32px"><a href="#" class="more">VIEW MORE
+          <svg width="20" height="10" viewBox="0 0 20 10" fill="none" stroke="currentColor"><path d="M0 5h18M14 1l4 4-4 4"/></svg></a></p>
+      </div>
+    </div>
+    <ul class="approach">
+      <li><p class="approach-no">01</p><p class="approach-en t-h3">Understand the Business</p><p class="approach-ja">事業を、<wbr>深く<wbr>理解する。</p></li>
+      <li><p class="approach-no">02</p><p class="approach-en t-h3">Solve, Not Just Analyze</p><p class="approach-ja">分析で<wbr>終わらず、<wbr>解決に。</p></li>
+      <li><p class="approach-no">03</p><p class="approach-en t-h3">Stay Ahead of Change</p><p class="approach-ja">変化の<wbr>その<wbr>先へ。</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ News / Events（No.13：理念の下へ移動） ============ -->
+<section class="sec" id="news">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">News &amp; Events<span class="rq">No.13</span></p>
+        <h2 class="sec-title">ニュース・イベント</h2>
+      </div>
+    </div>
+    <div class="ne-grid">
+      <div class="ne-col">
+        <h3 class="t-h3">News <a href="#" class="more">VIEW ALL</a></h3>
+        <ul>
+          <li class="ne-item"><span class="ne-date">2026.00.00</span><div><span class="ne-tag">お知らせ</span><p class="ne-text">お知らせの<wbr>タイトルが<wbr>入ります<wbr>（ダミー）。</p></div></li>
+          <li class="ne-item"><span class="ne-date">2026.00.00</span><div><span class="ne-tag">メディア</span><p class="ne-text">メディア掲載の<wbr>タイトルが<wbr>入ります<wbr>（ダミー）。</p></div></li>
+          <li class="ne-item"><span class="ne-date">2026.00.00</span><div><span class="ne-tag">受賞</span><p class="ne-text">受賞の<wbr>お知らせが<wbr>入ります<wbr>（ダミー）。</p></div></li>
+        </ul>
+      </div>
+      <div class="ne-col">
+        <h3 class="t-h3">Events <a href="#" class="more">VIEW ALL</a></h3>
+        <ul>
+          <li class="ne-item"><span class="ne-date">2026.00.00</span><div><span class="ne-tag">セミナー</span><p class="ne-text">セミナーの<wbr>タイトルが<wbr>入ります<wbr>（ダミー）。</p></div></li>
+          <li class="ne-item"><span class="ne-date">2026.00.00</span><div><span class="ne-tag">登壇</span><p class="ne-text">登壇情報の<wbr>タイトルが<wbr>入ります<wbr>（ダミー）。</p></div></li>
+          <li class="ne-item"><span class="ne-date">2026.00.00</span><div><span class="ne-tag">セミナー</span><p class="ne-text">セミナーの<wbr>タイトルが<wbr>入ります<wbr>（ダミー）。</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Offices（No.2：赤坂・丸の内の紹介） ============ -->
+<section class="sec is-tint" id="offices">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Our Offices<span class="rq">No.2</span></p>
+        <h2 class="sec-title"><span class="ib"><span class="nw">2つ</span>の<wbr>オフィス、</span><span class="ib">ひとつの<wbr>事務所。</span></h2>
+      </div>
+    </div>
+    <div class="of-intro">
+      <article class="of-box">
+        <div class="of-box-photo">PHOTO</div>
+        <div>
+          <p class="of-box-en">AKASAKA</p>
+          <h3>赤坂オフィス</h3>
+          <p class="of-box-rep">代表　斎藤 創</p>
+          <p class="of-box-body">オフィスの<wbr>特徴・強みの<wbr>紹介文が<wbr>入ります<wbr>（ダミー）。<br />2〜<span class="nw">3行</span>程度で、<wbr>取り扱う<wbr>案件の<wbr>傾向や<wbr>チームの<wbr>特色を<wbr>記載する<wbr>想定です。</p>
+          <ul class="of-box-fields"><li>FinTech / Digital Assets</li><li>Technology / AI</li><li>Startups</li></ul>
+          <a href="#" class="more">赤坂オフィスに<wbr>ついて
+            <svg width="20" height="10" viewBox="0 0 20 10" fill="none" stroke="currentColor"><path d="M0 5h18M14 1l4 4-4 4"/></svg></a>
+        </div>
+      </article>
+      <article class="of-box">
+        <div class="of-box-photo">PHOTO</div>
+        <div>
+          <p class="of-box-en">MARUNOUCHI</p>
+          <h3>丸の<wbr>内オフィス</h3>
+          <p class="of-box-rep">代表　佐藤 有紀</p>
+          <p class="of-box-body">オフィスの<wbr>特徴・強みの<wbr>紹介文が<wbr>入ります<wbr>（ダミー）。<br />2〜<span class="nw">3行</span>程度で、<wbr>取り扱う<wbr>案件の<wbr>傾向や<wbr>チームの<wbr>特色を<wbr>記載する<wbr>想定です。</p>
+          <ul class="of-box-fields"><li>M&amp;A / Corporate</li><li>Funds / Finance</li><li>Startups</li></ul>
+          <a href="#" class="more">丸の<wbr>内オフィスに<wbr>ついて
+            <svg width="20" height="10" viewBox="0 0 20 10" fill="none" stroke="currentColor"><path d="M0 5h18M14 1l4 4-4 4"/></svg></a>
+        </div>
+      </article>
+    </div>
+    <p class="rq-note">紹介文・各オフィスの<wbr>主な<wbr>分野は<wbr>仮置きです。<br />原稿を<wbr>いただき次第差し替えます。<br /><span class="nw">2つ</span>の<wbr>カードは<wbr>同じ<wbr>大きさ・<wbr>同じ<wbr>構成にし、<wbr>どちらか<wbr>一方に<wbr>偏らない<wbr>レイアウトに<wbr>しています。</p>
+  </div>
+</section>
+
+<!-- ============ Practices（No.3 / No.4） ============ -->
+<section class="sec is-navy" id="practices">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Practices<span class="rq">No.3／No.4</span></p>
+        <h2 class="sec-title">業務分野</h2>
+      </div>
+      <a href="#" class="more">ALL PRACTICES
+        <svg width="20" height="10" viewBox="0 0 20 10" fill="none" stroke="currentColor"><path d="M0 5h18M14 1l4 4-4 4"/></svg></a>
+    </div>
+    <div class="variant-bar"><span>【No.3 ご提案】キーワードの<wbr>表示：</span>
+      <div class="chips" data-variants="#pr-carousel">
+        <button type="button" data-value="a" aria-pressed="true"><span class="nw">案A</span> テキスト</button>
+        <button type="button" data-value="b" aria-pressed="false"><span class="nw">案B</span> 薄い<wbr>背景</button>
+        <button type="button" data-value="c" aria-pressed="false"><span class="nw">案C</span> ハッシュタグ風</button>
+      </div>
+    </div>
+    <div class="carousel" id="pr-carousel" data-carousel data-variant="a" data-interval="5000" style="--per:3">
+      <div class="cr-track">
+        <a href="#" class="pr-card">
+          <div class="pr-thumb" style="background-image:url(assets/sample-article-fintech.jpg)"></div>
+          <div class="pr-body">
+            <p class="pr-no">01</p>
+            <h3 class="pr-name t-h3">FinTech / Digital Assets</h3>
+            <ul class="pr-tags"><li>暗号資産</li><li>ステーブルコイン</li><li>STO</li><li>DeFi</li><li>決済・資金移動</li><li>許認可・登録取得支援</li></ul>
+          </div>
+        </a>
+        <a href="#" class="pr-card">
+          <div class="pr-thumb" style="background-image:url(assets/img-tokyo.jpg)"></div>
+          <div class="pr-body">
+            <p class="pr-no">02</p>
+            <h3 class="pr-name t-h3">M&amp;A / Corporate</h3>
+            <ul class="pr-tags"><li>M&amp;<span class="nw">A・</span>組織再編</li><li>法務デューディリジェンス</li><li>公開買付</li><li>PMI</li><li>コーポレートガバナンス</li><li>紛争解決</li></ul>
+          </div>
+        </a>
+        <a href="#" class="pr-card">
+          <div class="pr-thumb" style="background-image:url(assets/img-towers.jpg)"></div>
+          <div class="pr-body">
+            <p class="pr-no">03</p>
+            <h3 class="pr-name t-h3">Funds / Finance</h3>
+            <ul class="pr-tags"><li>V<span class="nw">C・P</span><span class="nw">Eフ</span>ァンド</li><li>ファンド組成・規制</li><li>投資運用業登録</li><li>証券化・流動化</li><li>アセットファイナンス</li><li>不動産金融</li></ul>
+          </div>
+        </a>
+        <a href="#" class="pr-card">
+          <div class="pr-thumb" style="background-image:url(assets/img-tech.jpg)"></div>
+          <div class="pr-body">
+            <p class="pr-no">04</p>
+            <h3 class="pr-name t-h3">Technology / AI / Innovation</h3>
+            <ul class="pr-tags"><li>A<span class="nw">I・</span>生<span class="nw">成A</span>I</li><li>A<span class="nw">Iガ</span>バナンス</li><li>データ・個人情報保護</li><li>知的財産権</li><li>宇宙</li><li>量子技術</li></ul>
+          </div>
+        </a>
+        <a href="#" class="pr-card">
+          <div class="pr-thumb" style="background-image:url(assets/img-signing.jpg)"></div>
+          <div class="pr-body">
+            <p class="pr-no">05</p>
+            <h3 class="pr-name t-h3">Startups / Emerging Companies</h3>
+            <ul class="pr-tags"><li>資金調達</li><li>投資契約・株主間契約</li><li>ストックオプション設計</li><li>事業提携<span class="nw">・J</span>V</li><li>上場準備</li><li>Exit</li></ul>
+          </div>
+        </a>
+      </div>
+    </div>
+    <p class="rq-note"><span class="nw">5分</span>野を<wbr>同じ<wbr>大きさの<wbr>カードで<wbr>並べ、<wbr>自動で<wbr>横に<wbr>送ります。<br />カーソルを<wbr>合わせると<wbr>止まり、<wbr>右下の<wbr>ボタンで<wbr>停止・再生・前後の<wbr>切り替えが<wbr>できます。</p>
+  </div>
+</section>
+
+<!-- ============ Professionals（No.1） ============ -->
+<section class="sec" id="professionals">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Professionals<span class="rq">No.1</span></p>
+        <h2 class="sec-title">弁護士・スタッフ</h2>
+      </div>
+      <a href="#" class="more">ALL PROFESSIONALS
+        <svg width="20" height="10" viewBox="0 0 20 10" fill="none" stroke="currentColor"><path d="M0 5h18M14 1l4 4-4 4"/></svg></a>
+    </div>
+    <div class="pf" data-pf>
+      <div class="pf-preview" aria-hidden="true">
+        <div class="pf-preview-photo">創</div>
+        <p class="pf-preview-role">代表弁護士 / 赤坂オフィス</p>
+        <p class="pf-preview-name">斎藤 創</p>
+      </div>
+      <div>
+        <div class="tabs" role="tablist" data-tabs>
+          <button type="button" role="tab" aria-selected="true" aria-controls="pf-1">Partners<span>代表・パートナー</span></button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="pf-2">Counsel<span>カウンセル</span></button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="pf-3">Associates<span>アソシエイト</span></button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="pf-4">Advisors &amp; Staff<span>アドバイザー・スタッフ</span></button>
+        </div>
+        <div id="pf-1" role="tabpanel">
+          <ul class="pf-names">
+            <li><a href="#" class="is-on" data-initial="創" data-name="斎藤 創" data-role="代表弁護士 / 赤坂オフィス"><span class="n">斎藤 創</span><span class="e">So Saito</span></a></li>
+            <li><a href="#" data-initial="佐" data-name="佐藤 有紀" data-role="代表弁護士 / 丸の内オフィス"><span class="n">佐藤 有紀</span><span class="e">Yuki Sato</span></a></li>
+            <li><a href="#" data-initial="砂" data-name="砂田 有史" data-role="パートナー"><span class="n">砂田 有史</span><span class="e">Arifumi Sunada</span></a></li>
+            <li><a href="#" data-initial="津" data-name="津藤 秀平" data-role="パートナー"><span class="n">津藤 秀平</span><span class="e">Shuhei Tsudo</span></a></li>
+            <li><a href="#" data-initial="—" data-name="氏名（ダミー）" data-role="パートナー"><span class="n">氏名<wbr>（ダミー）</span><span class="e">Name</span></a></li>
+            <li><a href="#" data-initial="—" data-name="氏名（ダミー）" data-role="パートナー"><span class="n">氏名<wbr>（ダミー）</span><span class="e">Name</span></a></li>
+          </ul>
+        </div>
+        <div id="pf-2" role="tabpanel" hidden>
+          <ul class="pf-names">
+            <li><a href="#" data-initial="—" data-name="氏名（ダミー）" data-role="カウンセル"><span class="n">氏名<wbr>（ダミー）</span><span class="e">Name</span></a></li>
+            <li><a href="#" data-initial="—" data-name="氏名（ダミー）" data-role="カウンセル"><span class="n">氏名<wbr>（ダミー）</span><span class="e">Name</span></a></li>
+            <li><a href="#" data-initial="—" data-name="氏名（ダミー）" data-role="カウンセル"><span class="n">氏名<wbr>（ダミー）</span><span class="e">Name</span></a></li>
+          </ul>
+        </div>
+        <div id="pf-3" role="tabpanel" hidden>
+          <ul class="pf-names">
+            <li><a href="#" data-initial="—" data-name="氏名（ダミー）" data-role="アソシエイト"><span class="n">氏名<wbr>（ダミー）</span><span class="e">Name</span></a></li>
+            <li><a href="#" data-initial="—" data-name="氏名（ダミー）" data-role="アソシエイト"><span class="n">氏名<wbr>（ダミー）</span><span class="e">Name</span></a></li>
+            <li><a href="#" data-initial="—" data-name="氏名（ダミー）" data-role="アソシエイト"><span class="n">氏名<wbr>（ダミー）</span><span class="e">Name</span></a></li>
+            <li><a href="#" data-initial="—" data-name="氏名（ダミー）" data-role="アソシエイト"><span class="n">氏名<wbr>（ダミー）</span><span class="e">Name</span></a></li>
+            <li><a href="#" data-initial="—" data-name="氏名（ダミー）" data-role="アソシエイト"><span class="n">氏名<wbr>（ダミー）</span><span class="e">Name</span></a></li>
+          </ul>
+        </div>
+        <div id="pf-4" role="tabpanel" hidden>
+          <ul class="pf-names">
+            <li><a href="#" data-initial="—" data-name="氏名（ダミー）" data-role="外国法事務弁護士"><span class="n">氏名<wbr>（ダミー）</span><span class="e">Name</span></a></li>
+            <li><a href="#" data-initial="—" data-name="氏名（ダミー）" data-role="アドバイザー"><span class="n">氏名<wbr>（ダミー）</span><span class="e">Name</span></a></li>
+            <li><a href="#" data-initial="—" data-name="氏名（ダミー）" data-role="パラリーガル"><span class="n">氏名<wbr>（ダミー）</span><span class="e">Name</span></a></li>
+          </ul>
+        </div>
+        <p class="rq-note">カテゴリーごとに<wbr>一覧を<wbr>切り替え、<wbr>名前に<wbr>カーソルを<wbr>合わせると<wbr>左側に<wbr>写真が<wbr>表示されます。<br />名前を<wbr>クリックすると<wbr>各プロフィールページへ<wbr>移動します。<br />カテゴリーの<wbr>区分・名称は<wbr>仮置きです<wbr>（スマートフォンでは<wbr>写真欄を<wbr>省き、<wbr>一覧のみ<wbr>表示）。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Insights（No.5 / No.7） ============ -->
+<!-- 記事サムネイルはサンプル（Unsplash）。本番はmicroCMSで先方が設定 -->
+<section class="sec is-tint" id="insights">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Insights<span class="rq">No.5／No.7</span></p>
+        <h2 class="sec-title">記事</h2>
+      </div>
+      <a href="insights.html" class="more">ALL INSIGHTS
+        <svg width="20" height="10" viewBox="0 0 20 10" fill="none" stroke="currentColor"><path d="M0 5h18M14 1l4 4-4 4"/></svg></a>
+    </div>
+    <div class="tabs" role="tablist" data-tabs>
+      <button type="button" role="tab" aria-selected="true" aria-controls="in-articles">Articles<span>記事</span></button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="in-faq">FAQ<span>よく<wbr>ある<wbr>ご質問</span></button>
+    </div>
+
+    <div id="in-articles" role="tabpanel">
+      <div class="chips in-filter" data-filter-target="#in-track" data-filter-key="office">
+        <button type="button" data-value="all" aria-pressed="true">すべて</button>
+        <button type="button" data-value="akasaka" aria-pressed="false">赤坂オフィス</button>
+        <button type="button" data-value="marunouchi" aria-pressed="false">丸の<wbr>内オフィス</button>
+      </div>
+      <div class="carousel" data-carousel data-interval="6000" style="--per:3">
+        <div class="cr-track" id="in-track">
+          <a href="#" class="in-card" data-office="akasaka"><div class="in-img" style="background-image:url(assets/sample-article-fintech.jpg)"></div><div class="in-body"><p class="in-meta"><span class="in-cat">FinTech / Digital Assets</span><span>2026.00.00</span><span class="in-office">赤坂</span></p><p class="in-title">記事タイトルが<wbr>入ります<wbr>（ダミー）。<br /><span class="nw">2行</span>程度を<wbr>想定しています。</p></div></a>
+          <a href="#" class="in-card" data-office="marunouchi"><div class="in-img" style="background-image:url(assets/sample-article-corporate.jpg)"></div><div class="in-body"><p class="in-meta"><span class="in-cat">M&amp;A / Corporate</span><span>2026.00.00</span><span class="in-office">丸の<wbr>内</span></p><p class="in-title">記事タイトルが<wbr>入ります<wbr>（ダミー）。<br /><span class="nw">2行</span>程度を<wbr>想定しています。</p></div></a>
+          <a href="#" class="in-card" data-office="akasaka"><div class="in-img" style="background-image:url(assets/img-tech.jpg)"></div><div class="in-body"><p class="in-meta"><span class="in-cat">Technology / AI</span><span>2026.00.00</span><span class="in-office">赤坂</span></p><p class="in-title">記事タイトルが<wbr>入ります<wbr>（ダミー）。<br /><span class="nw">2行</span>程度を<wbr>想定しています。</p></div></a>
+          <a href="#" class="in-card" data-office="marunouchi"><div class="in-img" style="background-image:url(assets/img-towers2.jpg)"></div><div class="in-body"><p class="in-meta"><span class="in-cat">Funds / Finance</span><span>2026.00.00</span><span class="in-office">丸の<wbr>内</span></p><p class="in-title">記事タイトルが<wbr>入ります<wbr>（ダミー）。<br /><span class="nw">2行</span>程度を<wbr>想定しています。</p></div></a>
+          <a href="#" class="in-card" data-office="akasaka marunouchi"><div class="in-img" style="background-image:url(assets/sample-startups.jpg)"></div><div class="in-body"><p class="in-meta"><span class="in-cat">Startups</span><span>2026.00.00</span><span class="in-office">共同</span></p><p class="in-title">記事タイトルが<wbr>入ります<wbr>（ダミー）。<br /><span class="nw">2行</span>程度を<wbr>想定しています。</p></div></a>
+        </div>
+      </div>
+      <p class="rq-note">最新記<span class="nw">事5件</span>を<wbr>カルーセルで<wbr>表示します。<br />各記事に<wbr>オフィス（赤坂／丸の<wbr>内）を<wbr>設定でき、<wbr><span class="nw">5件</span>の<wbr>うち丸の<wbr>内の<wbr>記事を<wbr><span class="nw">2件</span>など、<wbr>表示する<wbr>件数を<wbr>オフィスごとに<wbr>指定できる<wbr>仕様を<wbr>想定しています。<br />オフィス別の<wbr>絞り込みも<wbr>可能です。</p>
+    </div>
+
+    <div id="in-faq" role="tabpanel" hidden>
+      <div class="faq-list">
+        <details><summary><span class="faq-q">Q</span><span class="faq-t">FA<span class="nw">Qの</span><wbr>質問文が<wbr>入ります<wbr>（ダミー）。</span><span class="faq-i">+</span></summary><p class="faq-a">回答文が<wbr>入ります<wbr>（ダミー）。</p></details>
+        <details><summary><span class="faq-q">Q</span><span class="faq-t">FA<span class="nw">Qの</span><wbr>質問文が<wbr>入ります<wbr>（ダミー）。</span><span class="faq-i">+</span></summary><p class="faq-a">回答文が<wbr>入ります<wbr>（ダミー）。</p></details>
+        <details><summary><span class="faq-q">Q</span><span class="faq-t">FA<span class="nw">Qの</span><wbr>質問文が<wbr>入ります<wbr>（ダミー）。</span><span class="faq-i">+</span></summary><p class="faq-a">回答文が<wbr>入ります<wbr>（ダミー）。</p></details>
+      </div>
+      <div class="faq-foot">
+        <p class="t-small">分野別の<wbr>よく<wbr>ある<wbr>ご質問は、<wbr>FA<span class="nw">Qペ</span>ージに<wbr>まとめて<wbr>掲載しています。</p>
+        <a href="insights.html#faq" class="btn">VIEW FAQ
+          <svg width="20" height="10" viewBox="0 0 20 10" fill="none" stroke="currentColor"><path d="M0 5h18M14 1l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Awards（No.6） ============ -->
+<section class="sec" id="awards">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Awards &amp; Rankings<span class="rq">No.6</span></p>
+        <h2 class="sec-title">受賞・ランキング</h2>
+      </div>
+      <a href="#" class="more">VIEW ALL
+        <svg width="20" height="10" viewBox="0 0 20 10" fill="none" stroke="currentColor"><path d="M0 5h18M14 1l4 4-4 4"/></svg></a>
+    </div>
+    <div class="carousel" data-carousel data-interval="5500" style="--per:3">
+      <div class="cr-track">
+        <div class="aw-card"><p class="aw-year">2026</p><p class="aw-org t-h3">Chambers Asia Pacific</p><p class="aw-desc">FinTech<wbr>（ダミー：受賞データ受領後に<wbr>差し替え）</p></div>
+        <div class="aw-card"><p class="aw-year">2026</p><p class="aw-org t-h3">The Best Lawyers</p><p class="aw-desc">Banking and Finance Law / Corporate and M&amp;A Law<wbr>（ダミー）</p></div>
+        <div class="aw-card"><p class="aw-year">2026</p><p class="aw-org t-h3">The Legal 500</p><p class="aw-desc">Investment Funds<wbr>（ダミー）</p></div>
+        <div class="aw-card"><p class="aw-year">2025</p><p class="aw-org t-h3">受賞媒体名<wbr>（ダミー）</p><p class="aw-desc">分野名<wbr>（ダミー）</p></div>
+        <div class="aw-card"><p class="aw-year">2025</p><p class="aw-org t-h3">受賞媒体名<wbr>（ダミー）</p><p class="aw-desc">分野名<wbr>（ダミー）</p></div>
+      </div>
+    </div>
+    <p class="note">※ 媒体名は<wbr>プロフィール記載から<wbr>仮置き。<br />正式な<wbr>受賞名・年度・ロゴは<wbr>06_Award<span class="nw">s・</span>受賞歴の<wbr>資料受領後に<wbr>反映。</p>
+  </div>
+</section>
+
+<!-- ============ Careers ============ -->
+<section class="sec careers" id="careers">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Careers</p>
+      <h2 class="sec-title">採用情報</h2>
+      <p class="lead">司法修習予定者・経験弁護士の<wbr>募集情報、<wbr>所属弁護士の<wbr>インタビュー、<wbr>Q&amp;<span class="nw">Aを</span><wbr>掲載します。</p>
+    </div>
+    <a href="#" class="btn is-light">VIEW CAREERS
+      <svg width="20" height="10" viewBox="0 0 20 10" fill="none" stroke="currentColor"><path d="M0 5h18M14 1l4 4-4 4"/></svg></a>
+  </div>
+</section>
+
+<!-- ============ Access / Contact ============ -->
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Access</p>
+        <h2 class="sec-title">アクセス</h2>
+      </div>
+    </div>
+    <div class="of-grid">
+      <div class="of-card">
+        <p class="of-name">赤坂オフィス</p><p class="of-en">AKASAKA OFFICE</p>
+        <p class="of-addr">住所・電話<span class="nw">・F</span>A<span class="nw">Xは</span><wbr>現行サイトから<wbr>転記予定</p>
+        <div class="of-map">MAP</div>
+      </div>
+      <div class="of-card">
+        <p class="of-name">丸の<wbr>内オフィス</p><p class="of-en">MARUNOUCHI OFFICE</p>
+        <p class="of-addr">住所・電話<span class="nw">・F</span>A<span class="nw">Xは</span><wbr>現行サイトから<wbr>転記予定</p>
+        <div class="of-map">MAP</div>
+      </div>
+      <div class="contact-card">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 class="sec-title">お問い合わせ</h2>
+          <p>ご相談・<wbr>ご依頼は<wbr>こちらから<wbr>お問い合わせください。</p>
+        </div>
+        <a href="contact.html" class="btn is-light">CONTACT
+          <svg width="20" height="10" viewBox="0 0 20 10" fill="none" stroke="currentColor"><path d="M0 5h18M14 1l4 4-4 4"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Footer ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <a href="index.html" class="logo"><span class="logo-main">SO<small>&amp;</small>SATO</span><span class="logo-sub">INNOVATIVE LAWOFFICES</span></a>
+        <p style="margin-top:20px">創・佐藤法律事務所</p>
+      </div>
+      <div class="ft-col"><h4>About</h4><ul><li><a href="#">About Us</a></li><li><a href="#">Awards</a></li><li><a href="#">DE&amp;I Policy</a></li><li><a href="#">Professionals</a></li></ul></div>
+      <div class="ft-col"><h4>Practices</h4><ul><li><a href="#">FinTech / Digital Assets</a></li><li><a href="#">M&amp;A / Corporate</a></li><li><a href="#">Funds / Finance</a></li><li><a href="#">Technology / AI</a></li><li><a href="#">Startups</a></li></ul></div>
+      <div class="ft-col"><h4>Insights</h4><ul><li><a href="insights.html">Insights</a></li><li><a href="insights.html#articles">Articles</a></li><li><a href="insights.html#faq">FAQ</a></li><li><a href="#">News</a></li><li><a href="#">Events</a></li></ul></div>
+      <div class="ft-col"><h4>Firm</h4><ul><li><a href="#">Careers</a></li><li><a href="contact.html">Contact</a></li><li><a href="style-guide.html">Style Guide<wbr>（制作用）</a></li></ul></div>
+    </div>
+    <div class="ft-bottom">
+      <ul><li><a href="#">個人情報保護方針</a></li><li><a href="#">クッキーポリシー</a></li><li><a href="#">サイトマップ</a></li></ul>
+      <p>&copy; So &amp; Sato Law Offices</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js?v=20261125"></script>
+</body>
+</html>

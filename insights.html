@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>創・佐藤法律事務所｜Insights（仮）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css?v=20261125">
+<style>
+.entry { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.entry a { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 280px; padding: 36px; color: #fff; background: var(--navy-deep) center / cover no-repeat; overflow: hidden; }
+.entry a::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,26,54,.15) 0%, rgba(12,26,54,.85) 100%); transition: background .3s; }
+.entry a:hover::before { background: linear-gradient(180deg, rgba(12,26,54,.3) 0%, rgba(12,26,54,.92) 100%); }
+.entry a > * { position: relative; }
+.entry .en { font-family: var(--en); font-weight: 500; font-size: clamp(28px, 3vw, 40px); letter-spacing: .04em; line-height: 1.2; }
+.entry .ja { font-size: 14px; margin-top: 6px; opacity: .9; }
+.entry .desc { font-size: 13.5px; margin-top: 14px; opacity: .85; max-width: 32em; }
+.entry .go { margin-top: 20px; font-family: var(--en); font-size: 13px; letter-spacing: .14em; display: inline-flex; gap: 10px; align-items: center; }
+.sub-entry { margin-top: 24px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.sub-entry a { display: flex; justify-content: space-between; align-items: center; padding: 22px 28px; border: 1px solid var(--line); transition: border-color .3s; }
+.sub-entry a:hover { border-color: var(--navy); }
+.sub-entry .en { font-family: var(--en); font-weight: 500; font-size: 20px; color: var(--navy); }
+.sub-entry .ja { font-size: 12.5px; color: var(--ink-sub); margin-left: 12px; }
+.filters { display: grid; gap: 14px; margin-bottom: 32px; }
+.filters .lbl { font-size: 12px; color: var(--ink-sub); margin-right: 8px; }
+.filters .row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.ar-list { border-top: 1px solid var(--line); }
+.ar-item { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 28px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+.ar-img { aspect-ratio: 16 / 10; background: center / cover no-repeat; }
+.ar-meta { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12px; color: var(--ink-sub); }
+.ar-meta .cat { font-family: var(--en); color: var(--accent); }
+.ar-title { font-size: 16px; font-weight: 500; color: var(--navy); margin-top: 8px; line-height: 1.75; }
+.ar-ex { font-size: 13.5px; color: var(--ink-sub); margin-top: 6px; }
+.faq-group + .faq-group { margin-top: 48px; }
+.faq-group h3 { margin-bottom: 12px; }
+.faq-list { border-top: 1px solid var(--line); }
+.faq-list details { border-bottom: 1px solid var(--line); }
+.faq-list summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 32px minmax(0, 1fr) 24px; gap: 12px; padding: 20px 0; align-items: start; }
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-q { font-family: var(--en); font-size: 18px; color: var(--accent); line-height: 1.5; }
+.faq-t { font-weight: 500; color: var(--navy); }
+.faq-i { font-size: 20px; line-height: 1.3; color: var(--ink-sub); transition: transform .3s; text-align: center; }
+details[open] .faq-i { transform: rotate(45deg); }
+.faq-a { padding: 0 36px 22px 44px; color: var(--ink-sub); font-size: 14px; }
+.pager { display: flex; justify-content: center; gap: 8px; margin-top: 40px; font-family: var(--en); }
+.pager a, .pager span { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid var(--line); font-size: 14px; }
+.pager span { background: var(--navy); color: #fff; border-color: var(--navy); }
+@media (max-width: 860px) {
+  .entry, .sub-entry { grid-template-columns: minmax(0, 1fr); }
+  .entry a { min-height: 220px; padding: 28px; }
+  .ar-item { grid-template-columns: 120px minmax(0, 1fr); gap: 16px; }
+}
+@media (max-width: 640px) {
+  .ar-item { grid-template-columns: minmax(0, 1fr); }
+  .faq-a { padding: 0 0 22px 44px; }
+}
+</style>
+</head>
+<body>
+
+<div class="draft"><button type="button" data-rq-toggle>修<span class="nw">正N</span>o<span class="nw">.を</span><wbr>隠す</button><span>仮デザイン・ダミー素材を<wbr>含みます</span></div>
+
+<!-- ============ Header ============ -->
+<header class="header is-solid">
+  <a href="index.html" class="logo" aria-label="創・佐藤法律事務所">
+    <span class="logo-main">SO<small>&amp;</small>SATO</span>
+    <span class="logo-sub">INNOVATIVE LAWOFFICES</span>
+  </a>
+  <nav class="gnav" aria-label="グローバルナビゲーション">
+    <div class="gnav gnav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#professionals">Professionals</a>
+      <a href="index.html#practices">Practices</a>
+      <a href="insights.html" aria-current="page">Insights</a>
+      <a href="index.html#news">News &amp; Events</a>
+      <a href="index.html#careers">Careers</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="gnav-tools">
+      <a href="#" class="icon-btn" aria-label="サイト内検索">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
+      </a>
+      <a href="#" class="lang">JP / EN</a>
+      <button class="menu-btn" aria-label="メニュー"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+
+
+<main>
+  <section class="page-head">
+    <div class="wrap">
+      <p class="crumb"><a href="index.html">Home</a><span>/</span><span>Insights</span></p>
+      <p class="eyebrow">Insights<span class="rq">No.9</span></p>
+      <h1 class="t-h1">インサイト</h1>
+      <p class="lead">各分野の<wbr>最新の<wbr>法改正・<wbr>実務動向を<wbr>解説する<wbr>記事と、<wbr>よく<wbr>ある<wbr>ご質問を<wbr>まとめています。<br />（リード文は<wbr>ダミー）</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="entry">
+        <a href="#articles" style="background-image:url(assets/sample-article-corporate.jpg)">
+          <span class="en">Articles</span><span class="ja">記事・ニュースレター</span>
+          <span class="desc">所属弁護士に<wbr>よる<wbr>解説記事を、<wbr>分野・オフィス別に<wbr>ご覧いただけます。<br />（ダミー）</span>
+          <span class="go">VIEW ARTICLES <svg width="20" height="10" viewBox="0 0 20 10" fill="none" stroke="currentColor"><path d="M0 5h18M14 1l4 4-4 4"/></svg></span>
+        </a>
+        <a href="#faq" style="background-image:url(assets/img-signing.jpg)">
+          <span class="en">FAQ</span><span class="ja">よく<wbr>ある<wbr>ご質問</span>
+          <span class="desc">分野ごとに<wbr>よく<wbr>いただく<wbr>ご質問と、<wbr>その<wbr>回答を<wbr>まとめています。<br />（ダミー）</span>
+          <span class="go">VIEW FAQ <svg width="20" height="10" viewBox="0 0 20 10" fill="none" stroke="currentColor"><path d="M0 5h18M14 1l4 4-4 4"/></svg></span>
+        </a>
+      </div>
+      <div class="sub-entry">
+        <a href="index.html#news"><span><span class="en">News</span><span class="ja">お知らせ・メディア・受賞</span></span><svg width="20" height="10" viewBox="0 0 20 10" fill="none" stroke="currentColor"><path d="M0 5h18M14 1l4 4-4 4"/></svg></a>
+        <a href="index.html#news"><span><span class="en">Events</span><span class="ja">セミナー・登壇</span></span><svg width="20" height="10" viewBox="0 0 20 10" fill="none" stroke="currentColor"><path d="M0 5h18M14 1l4 4-4 4"/></svg></a>
+      </div>
+      <p class="rq-note">Insight<span class="nw">sを</span><wbr>クリックすると、<wbr>この<wbr>ページから<wbr>Article<span class="nw">sと</span><wbr>FA<span class="nw">Qの</span><wbr>両方<wbr>へ<wbr>アクセスできる<wbr>構成です。<br />New<span class="nw">s・E</span>vent<span class="nw">sへ</span>の<wbr>入口も<wbr>下段に<wbr>置いていますが、<wbr>不要で<wbr>あれば<wbr>外します。</p>
+    </div>
+  </section>
+
+  <section class="sec" id="articles">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Articles</p>
+          <h2 class="sec-title">記事</h2>
+        </div>
+      </div>
+      <div class="filters">
+        <div class="row"><span class="lbl">分野</span>
+          <div class="chips" data-filter-target="#ar-list" data-filter-key="field">
+            <button type="button" data-value="all" aria-pressed="true">すべて</button>
+            <button type="button" data-value="fintech" aria-pressed="false">FinTech / Digital Assets</button>
+            <button type="button" data-value="ma" aria-pressed="false">M&amp;A / Corporate</button>
+            <button type="button" data-value="funds" aria-pressed="false">Funds / Finance</button>
+            <button type="button" data-value="tech" aria-pressed="false">Technology / AI</button>
+            <button type="button" data-value="startups" aria-pressed="false">Startups</button>
+          </div>
+        </div>
+      </div>
+      <ul class="ar-list" id="ar-list">
+        <li class="ar-item" data-field="fintech"><div class="ar-img" style="background-image:url(assets/sample-article-fintech.jpg)"></div><div><p class="ar-meta"><span class="cat">FinTech / Digital Assets</span><span>2026.00.00</span><span>赤坂</span></p><p class="ar-title">記事タイトルが<wbr>入ります<wbr>（ダミー）。</p><p class="ar-ex">記事の<wbr>冒頭文が<wbr>入ります<wbr>（ダミー）。</p></div></li>
+        <li class="ar-item" data-field="ma"><div class="ar-img" style="background-image:url(assets/sample-article-corporate.jpg)"></div><div><p class="ar-meta"><span class="cat">M&amp;A / Corporate</span><span>2026.00.00</span><span>丸の<wbr>内</span></p><p class="ar-title">記事タイトルが<wbr>入ります<wbr>（ダミー）。</p><p class="ar-ex">記事の<wbr>冒頭文が<wbr>入ります<wbr>（ダミー）。</p></div></li>
+        <li class="ar-item" data-field="tech"><div class="ar-img" style="background-image:url(assets/img-tech.jpg)"></div><div><p class="ar-meta"><span class="cat">Technology / AI</span><span>2026.00.00</span><span>赤坂</span></p><p class="ar-title">記事タイトルが<wbr>入ります<wbr>（ダミー）。</p><p class="ar-ex">記事の<wbr>冒頭文が<wbr>入ります<wbr>（ダミー）。</p></div></li>
+        <li class="ar-item" data-field="funds"><div class="ar-img" style="background-image:url(assets/img-towers2.jpg)"></div><div><p class="ar-meta"><span class="cat">Funds / Finance</span><span>2026.00.00</span><span>丸の<wbr>内</span></p><p class="ar-title">記事タイトルが<wbr>入ります<wbr>（ダミー）。</p><p class="ar-ex">記事の<wbr>冒頭文が<wbr>入ります<wbr>（ダミー）。</p></div></li>
+        <li class="ar-item" data-field="startups"><div class="ar-img" style="background-image:url(assets/sample-startups.jpg)"></div><div><p class="ar-meta"><span class="cat">Startups</span><span>2026.00.00</span><span>共同</span></p><p class="ar-title">記事タイトルが<wbr>入ります<wbr>（ダミー）。</p><p class="ar-ex">記事の<wbr>冒頭文が<wbr>入ります<wbr>（ダミー）。</p></div></li>
+      </ul>
+      <div class="pager"><span>1</span><a href="#">2</a><a href="#">3</a><a href="#" aria-label="次へ">›</a></div>
+    </div>
+  </section>
+
+  <section class="sec" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">FAQ</p>
+          <h2 class="sec-title">よく<wbr>ある<wbr>ご質問</h2>
+        </div>
+      </div>
+      <div class="faq-group">
+        <h3 class="t-h3">FinTech / Digital Assets</h3>
+        <div class="faq-list">
+          <details><summary><span class="faq-q">Q</span><span class="faq-t">FA<span class="nw">Qの</span><wbr>質問文が<wbr>入ります<wbr>（ダミー）。</span><span class="faq-i">+</span></summary><p class="faq-a">回答文が<wbr>入ります<wbr>（ダミー）。</p></details>
+          <details><summary><span class="faq-q">Q</span><span class="faq-t">FA<span class="nw">Qの</span><wbr>質問文が<wbr>入ります<wbr>（ダミー）。</span><span class="faq-i">+</span></summary><p class="faq-a">回答文が<wbr>入ります<wbr>（ダミー）。</p></details>
+        </div>
+      </div>
+      <div class="faq-group">
+        <h3 class="t-h3">M&amp;A / Corporate</h3>
+        <div class="faq-list">
+          <details><summary><span class="faq-q">Q</span><span class="faq-t">FA<span class="nw">Qの</span><wbr>質問文が<wbr>入ります<wbr>（ダミー）。</span><span class="faq-i">+</span></summary><p class="faq-a">回答文が<wbr>入ります<wbr>（ダミー）。</p></details>
+          <details><summary><span class="faq-q">Q</span><span class="faq-t">FA<span class="nw">Qの</span><wbr>質問文が<wbr>入ります<wbr>（ダミー）。</span><span class="faq-i">+</span></summary><p class="faq-a">回答文が<wbr>入ります<wbr>（ダミー）。</p></details>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ Footer ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <a href="index.html" class="logo"><span class="logo-main">SO<small>&amp;</small>SATO</span><span class="logo-sub">INNOVATIVE LAWOFFICES</span></a>
+        <p style="margin-top:20px">創・佐藤法律事務所</p>
+      </div>
+      <div class="ft-col"><h4>About</h4><ul><li><a href="#">About Us</a></li><li><a href="#">Awards</a></li><li><a href="#">DE&amp;I Policy</a></li><li><a href="#">Professionals</a></li></ul></div>
+      <div class="ft-col"><h4>Practices</h4><ul><li><a href="#">FinTech / Digital Assets</a></li><li><a href="#">M&amp;A / Corporate</a></li><li><a href="#">Funds / Finance</a></li><li><a href="#">Technology / AI</a></li><li><a href="#">Startups</a></li></ul></div>
+      <div class="ft-col"><h4>Insights</h4><ul><li><a href="insights.html">Insights</a></li><li><a href="insights.html#articles">Articles</a></li><li><a href="insights.html#faq">FAQ</a></li><li><a href="#">News</a></li><li><a href="#">Events</a></li></ul></div>
+      <div class="ft-col"><h4>Firm</h4><ul><li><a href="#">Careers</a></li><li><a href="contact.html">Contact</a></li><li><a href="style-guide.html">Style Guide<wbr>（制作用）</a></li></ul></div>
+    </div>
+    <div class="ft-bottom">
+      <ul><li><a href="#">個人情報保護方針</a></li><li><a href="#">クッキーポリシー</a></li><li><a href="#">サイトマップ</a></li></ul>
+      <p>&copy; So &amp; Sato Law Offices</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js?v=20261125"></script>
+</body>
+</html>
